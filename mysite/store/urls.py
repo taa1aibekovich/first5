@@ -7,7 +7,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
 
     path('', ProductViewSet.as_view({'get': 'list', 'post': 'create'}), name='product_list'),
-    path('<int:pk/', ProductViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'}),
+    path('<int:pk>/', ProductViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'}),
          name='product_detail'),
 
     path('users/', UserProfileViewSet.as_view({'get': 'list', 'post': 'create'}), name='user_list'),
